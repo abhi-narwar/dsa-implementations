@@ -1,5 +1,15 @@
 Platform: LeetCode (start from easy → medium)
-
 Target: 250+ questions in 1 year
-
 Topics: Array, Strings, Linked List, Stack, Queue, Binary Tree, Graph, DP
+
+
+DSA (Data Structures & Algorithms)
+Topics:
+Arrays & Strings (2-pointer, sliding window)
+HashMap/Dictionary problems
+Stack & Queue basics
+Linked List basics
+Binary Tree basic traversal
+150–200 problems total (60% easy, 40% medium)
+Platform: LeetCode + InterviewBit
+⏳ Time: 3–4 months (part-time with other skills)
