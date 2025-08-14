@@ -1,0 +1,5 @@
+Platform: LeetCode (start from easy → medium)
+
+Target: 250+ questions in 1 year
+
+Topics: Array, Strings, Linked List, Stack, Queue, Binary Tree, Graph, DP
