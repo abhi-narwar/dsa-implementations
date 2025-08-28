@@ -27,4 +27,3 @@ class Solution:
                 result.append(num)         # Add number to result list
                 if len(result) == k:       # Stop when we have collected k numbers
                     return result
-
