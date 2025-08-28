@@ -1,28 +1,22 @@
+from collections import defaultdict
+from typing import List
+
 class Solution:
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
-        # HashMap to store sorted string as key, and list of anagrams as value
-        hashMap = {}
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # Dictionary where key = character count of a word, value = list of anagrams
+        res = defaultdict(list)
 
-        # Loop through each word in the input list
+        # Loop through every word in the input list
         for s in strs:
-            # Convert word to char array, sort it, then join back into string
-            # Example: "eat" -> ['a','e','t'] -> "aet"
-            charArray = sorted(s)
-            sortedStr = "".join(charArray)
+            # Create a list of 26 zeros for each alphabet letter (a to z)
+            count = [0] * 26  
 
-            # If the sorted word already exists in map, append current word
-            if sortedStr in hashMap:
-                listSubAnswer = hashMap[sortedStr]
-                listSubAnswer.append(s)
-            else:
-                # Otherwise, create a new list with this word
-                listSubAnswer = [s]
-                hashMap[sortedStr] = listSubAnswer
+            # Count how many times each character appears in the word
+            for c in s:
+                count[ord(c) - ord("a")] += 1
 
-        # Collect all grouped anagrams from the hashmap
-        listAnswer = []
-        for value in hashMap.values():
-            listAnswer.append(value)
+            # Use tuple(count) as a unique key (since lists can’t be keys in dict)
+            res[tuple(count)].append(s)
 
-        # Return the final list of lists
-        return listAnswer
+        # Convert dict_values to list
+        return list(res.values())
