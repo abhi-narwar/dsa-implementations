@@ -1,3 +1,5 @@
+#product of array except itself
+
 class Solution:
     def productExceptSelf(self, nums):
         n = len(nums)
