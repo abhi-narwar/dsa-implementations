@@ -1,18 +1,16 @@
-#binary search
-
 from typing import List
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        s = 0
-        e = len(nums) - 1
-        
-        while s <= e:
-            mid = (s + e) // 2
-            if target == nums[mid]:
+        low = 0
+        high = len(nums) - 1
+
+        while low <= high:
+            mid = (low + high) // 2
+            if nums[mid] == target:
                 return mid
             elif target < nums[mid]:
-                e = mid - 1
+                high = mid - 1
             else:
-                s = mid + 1
-        
-        return -1  
+                low = mid + 1
+
+        return -1
