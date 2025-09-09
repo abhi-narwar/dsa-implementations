@@ -8,7 +8,7 @@ class Solution:
             mid = (low + high) // 2
             if nums[mid] == target:
                 return mid
-            elif target < nums[mid]:
+            elif target < nums[mid]:    
                 high = mid - 1
             else:
                 low = mid + 1
