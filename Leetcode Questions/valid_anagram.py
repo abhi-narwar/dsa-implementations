@@ -1,21 +1,14 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        
         if len(s) != len(t):
             return False
-
         
-        char_counts = {}
+        s_count = {}
+        t_count = {}
+
         for char in s:
-            char_counts[char] = char_counts.get(char, 0) + 1
-
-        
+            s_count[char] = s_count.get(char, 0) + 1
         for char in t:
-            
-            if char_counts.get(char, 0) == 0:
-                return False
-           
-            char_counts[char] -= 1
-            
-        
-        return True
+            t_count[char] = t_count.get(char, 0) + 1
+
+        return s_count == t_count
