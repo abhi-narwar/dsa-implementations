@@ -1,6 +1,5 @@
-from typing import List
 class Solution:
-    def searchRange(self, nums: List[int], target: int) -> List[int]:
+    def searchRange(self, nums: list[int], target: int) -> list[int]:
         def first(nums,target):
             left=0
             right=len(nums)-1

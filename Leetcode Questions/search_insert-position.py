@@ -1,6 +1,5 @@
-from typing import List             
 class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
+    def searchInsert(self, nums: list[int], target: int) -> int:
         s = 0
         e = len(nums) - 1
 

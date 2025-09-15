@@ -1,8 +1,7 @@
 #dutch national flag algorithm (3-pointer approach)
 
-from typing import List
 class Solution:
-    def sortColors(self, nums: List[int]) -> None:
+    def sortColors(self, nums: list[int]) -> None:
         low, mid, high = 0, 0, len(nums) - 1
         
         while mid <= high:

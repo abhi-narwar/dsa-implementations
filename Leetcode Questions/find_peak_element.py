@@ -1,6 +1,5 @@
-from typing import List
 class Solution:
-    def findPeakElement(self, nums: List[int]) -> int:
+    def findPeakElement(self, nums: list[int]) -> int:
         left= 0
         right=len(nums) - 1
         

@@ -1,5 +1,3 @@
-#valid anagram
-
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
@@ -7,12 +5,17 @@ class Solution:
             return False
 
         
-        countS, countT = {}, {}
+        char_counts = {}
+        for char in s:
+            char_counts[char] = char_counts.get(char, 0) + 1
+
         
+        for char in t:
+            
+            if char_counts.get(char, 0) == 0:
+                return False
+           
+            char_counts[char] -= 1
+            
         
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)  
-            countT[t[i]] = 1 + countT.get(t[i], 0) 
-        
-        
-        return countS == countT
+        return True
